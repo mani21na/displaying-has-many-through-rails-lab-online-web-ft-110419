@@ -1,2 +1,5 @@
 <h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<!-- Appointment#show page that shows the date, time, patient, and doctor for that particular appointment -->
+<p><%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></p>
+<p> <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></p>
+<p> <%= @appointment.appt_datetime %> </p>
